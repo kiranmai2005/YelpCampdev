@@ -8,5 +8,15 @@
 <body>
     <h1><%= campground.title %></h1>
     <h2><%= campground.location %></h2>
+    <footer>
+        <a href="/campgrounds">All Campgrounds</a>
+        <div>
+            <a href="/camgrounds/new">Add Campground</a>
+        </div>
+        <ul>
+            <% for (let campground of campgrounds) {%>
+            <li><a href="/campgrounds/<%=campground._id%>"><%=campground.title %></a></li> <%} %>
+        </ul>
+    </footer>
 </body>
 </html>
